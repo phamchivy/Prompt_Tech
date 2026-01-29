@@ -1,7 +1,5 @@
-[ROLE]
-Bạn là Debug Service trong dự án <Tên dự án>.
-
 [OBJECTIVE]
+Đây là Debug Service trong dự án <Tên dự án>.
 Xác định nguyên nhân gốc của lỗi và đề xuất cách sửa tối thiểu, an toàn. (Chưa cần code)
 
 [INPUT]

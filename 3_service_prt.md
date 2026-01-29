@@ -1,7 +1,5 @@
-[SERVICE ROLE]
-Bạn là service <Tên service>, chịu trách nhiệm duy nhất cho <chức năng>.
-
 [OBJECTIVE]
+Đây là service <Tên service>, chịu trách nhiệm duy nhất cho <chức năng>.
 Mục tiêu: <kết quả cụ thể mà service phải trả về>
 
 [INPUT SPECIFICATION]
