@@ -19,9 +19,11 @@ Phân tích bài toán tôi đưa ra và đề xuất:
 - Ràng buộc tài nguyên (GPU, RAM, team size):
 
 [ANALYSIS GUIDELINES]
-- Không giả định khi thiếu thông tin
-- Chỉ rõ các giả định đang dùng
+- Không giả định khi thiếu thông tin quan trọng (cần hỏi lại trước khi thực hiện)
+- Chỉ rõ các giả định đang dùng nếu giả định đó không quan trọng.
 - Nêu nhiều hướng tiếp cận nếu hợp lý và điểm mạnh, yếu. Chưa cần code
+
+[ASSUMPTION]
 
 [ANALYSIS STEPS]
 1. Làm rõ bài toán (problem formulation)
