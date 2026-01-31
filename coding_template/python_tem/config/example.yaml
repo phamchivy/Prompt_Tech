@@ -1,0 +1,48 @@
+# Preprocessing Rules Configuration
+
+documents:
+  input_base: "raw_docs/documents"
+  output_base: "docs"
+  folders:
+    - "DB"
+    - "HLD"
+  
+  supported_formats:
+    - ".doc"
+    - ".docx"
+  
+  image_extraction:
+    enabled: true
+    output_folder: "images"
+    formats: [".png", ".jpg", ".jpeg", ".gif", ".bmp"]
+  
+  markdown_config:
+    heading_style: "atx"  # Use # for headings
+    code_block_style: "fenced"  # Use ``` for code blocks
+    preserve_formatting: true
+
+excels:
+  input_base: "raw_docs/excels"
+  output_base: "docs/excels"
+  folders:
+    - "nrf"
+    - "nssf"
+  
+  supported_formats:
+    - ".xlsx"
+    - ".xls"
+  
+  table_config:
+    max_column_width: 50
+    include_index: false
+    sheet_processing: "all"  # "all" or "first"
+  
+  chart_extraction:
+    enabled: true
+    output_folder: "images"
+    format: "png"
+    dpi: 300
+
+logging:
+  level: "INFO"
+  log_file: "logs/conversion.log"
