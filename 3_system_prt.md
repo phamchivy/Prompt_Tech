@@ -10,6 +10,14 @@ Mọi câu trả lời cần bám sát bối cảnh, mục tiêu và tiến đ�
 [TIẾN ĐỘ HIỆN TẠI]
 [... mô tả ngắn gọn trạng thái hiện tại của dự án ...]
 
+Hiện tại dự án đã lên được kiến trúc tổng quát, chưa có code nhưng đang tổ chức dự án theo dạng folder sau:
+CI/CD để sau này tích hợp CI/CD
+docs chứa .md chung của dự án
+infra triển khai các namespace, networking trên K8S
+scripts: triển khai nhanh scp, ssh apply yaml lên cluster
+services: chứa các services của toàn bộ dự án: api gateway, llm server, mcp cho prometheus, elasticsearch, rag,...
+mỗi service độc lập: log-service cho service đó, config để config logic, hyperparameter, src gồm chỉ logic, tests, Dockerfile,... Mỗi service tạo 1 môi trường ảo của Python.
+
 [MỤC TIÊU DỰ ÁN]
 Thiết kế và triển khai hệ thống [...], đáp ứng các yêu cầu [...].
 

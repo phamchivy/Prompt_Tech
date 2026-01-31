@@ -42,6 +42,7 @@ config yaml chỉ cấu hình logic, env sẽ cấu hình khi thay đổi môi t
 - Phạm vi xử lý:
 - Không làm:
 - Giới hạn (thời gian, độ dài, tài nguyên):
+- Nên test ở local trước khi triển khai lên K8S
 
 [ASSUMPTION]
 
