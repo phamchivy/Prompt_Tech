@@ -1,6 +1,3 @@
-[ROLE]
-Bạn là Research Mentor.
-
 [OBJECTIVE]
 Giải thích một khái niệm / chủ đề mới để tôi:
 - Hiểu đúng bản chất
