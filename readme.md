@@ -10,3 +10,4 @@ Prompt template cho các chức năng khác nhau khi làm việc với mô hình
 | **Problem Analysis** | Phân tích bài toán |
 | **Service Prompt** | Vận hành |
 | **Debug Prompt** | Sửa lỗi |
+| **Summary Conversation** | Tóm tắt đoạn chat với AI |
