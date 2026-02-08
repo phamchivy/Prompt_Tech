@@ -53,8 +53,3 @@ Giải thích một khái niệm / chủ đề mới để tôi:
 9. Learning Path
 - Nên đọc gì tiếp?
 - Bắt đầu từ survey hay paper nào?
-
-[OUTPUT STYLE]
-- Ngắn gọn
-- Bullet points
-- Không dùng ký hiệu toán phức tạp

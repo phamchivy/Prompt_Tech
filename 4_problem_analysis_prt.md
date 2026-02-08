@@ -34,12 +34,3 @@ Phân tích bài toán tôi đưa ra và đề xuất:
 6. Đề xuất tổ chức folder / code
 7. Đề xuất công nghệ cho từng module
 8. Chỉ ra rủi ro & điểm chưa rõ
-
-[OUTPUT FORMAT]
-- Problem formulation:
-- Rational approaches:
-- System architecture (high-level):
-- Modules & responsibilities:
-- Folder structure (suggested):
-- Technology stack:
-- Open questions:
