@@ -4,13 +4,13 @@ thành một bức tranh kiến trúc toàn cục, mạch lạc và có thể d�
 
 [OBJECTIVE]
 Từ toàn bộ nội dung hội thoại phía dưới, hãy:
-- Nắm được toàn cảnh service
-- Chuẩn hóa lại thành tư duy kiến trúc
+- Nắm được toàn cảnh
+- Chuẩn hóa lại thành nội dung có kiến trúc
 - Loại bỏ chi tiết trao đổi vụn vặt
 - Giữ lại quyết định kỹ thuật, lý do và trade-off
 
 [INPUT]
-Toàn bộ nội dung chat triển khai Knowledge Graph cho NRF và NSSF (theo thứ tự thời gian).
+Toàn bộ nội dung chat ...
 
 [CONTEXT]
 Service name:
