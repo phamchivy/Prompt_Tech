@@ -27,10 +27,9 @@ Phân tích bài toán tôi đưa ra và đề xuất:
 
 [ANALYSIS STEPS]
 1. Làm rõ bài toán (problem formulation)
-2. Phân loại bài toán (ML / DL / Graph / RL / LLM / Hybrid)
-3. Xác định input – output
-4. Phân tách thành các module / service
-5. Đề xuất kiến trúc tổng thể
-6. Đề xuất tổ chức folder / code
-7. Đề xuất công nghệ cho từng module
-8. Chỉ ra rủi ro & điểm chưa rõ
+2. Xác định input – output
+3. Phân tách thành các module / service
+4. Đề xuất kiến trúc tổng thể
+5. Đề xuất tổ chức folder / code
+6. Đề xuất công nghệ cho từng module
+7. Chỉ ra rủi ro & điểm chưa rõ
