@@ -1,42 +1,86 @@
 """
-Document Converter Service
+tests/test_config_and_logging.py
+
+Test thủ công cho 2 module: config và log_service.
+Chạy từ project root:
+    python tests/test_config_and_logging.py
 """
 
-import yaml
+import sys
 from pathlib import Path
-from typing import Tuple, List, Dict
-# REMOVE: import logging
 
-# ADD: Use centralized logger
-from log_service.logger import get_logger
+# Đảm bảo import được từ project root
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
-# ... other imports ...
+from config import get_project_root, load_config, CrawlerConfig
+from log_service import setup_logging, get_logger
 
-from config import get_project_root, load_config
+
+# ---------------------------------------------------------------------------
+# Test 1: PROJECT_ROOT
+# ---------------------------------------------------------------------------
+
+print("\n" + "=" * 60)
+print("TEST 1: PROJECT_ROOT")
+print("=" * 60)
 
 root = get_project_root()
-# Done! No Path().parent.parent
+print(f"PROJECT_ROOT : {root}")
+print(f"Exists       : {root.exists()}")
 
-class DocumentConverter:
-    """Converts document files to Markdown"""
-    
-    def __init__(self, config_path: str = None):
-        """Initialize converter with configuration"""
-        if config_path is None:
-            config_path = root / "config" / "preprocessing_rules.yaml"
-        
-        self.config = load_config(str(config_path))
-        
-        # REPLACE setup_logging() with get_logger()
-        self.logger = get_logger(__name__)
-        
-        self.input_base = Path(self.config['documents']['input_base'])
-        self.output_base = Path(self.config['documents']['output_base'])
-        # ... rest of init
-    
-    # REMOVE setup_logging() method entirely
-    # def setup_logging(self):
-    #     """Setup logging configuration"""
-    #     ...
-    
-    # ... rest of class methods unchanged
+
+# ---------------------------------------------------------------------------
+# Test 2: load_config raw
+# ---------------------------------------------------------------------------
+
+print("\n" + "=" * 60)
+print("TEST 2: load_config('crawl_config') — raw dict")
+print("=" * 60)
+
+raw = load_config("crawl_config")
+print(f"Keys         : {list(raw.keys())}")
+print(f"base_url     : {raw['base']['base_url']}")
+
+
+# ---------------------------------------------------------------------------
+# Test 3: CrawlerConfig attributes
+# ---------------------------------------------------------------------------
+
+print("\n" + "=" * 60)
+print("TEST 3: CrawlerConfig attributes")
+print("=" * 60)
+
+cfg = CrawlerConfig(raw)
+print(f"base_url          : {cfg.base_url}")
+print(f"delay             : {cfg.delay}")
+print(f"timeout           : {cfg.timeout}")
+print(f"max_retries       : {cfg.max_retries}")
+print(f"base_dir          : {cfg.base_dir}")
+print(f"raw_data_dir      : {cfg.raw_data_dir}")
+print(f"processed_data_dir: {cfg.processed_data_dir}")
+print(f"images_dir        : {cfg.images_dir}")
+print(f"metadata_dir      : {cfg.metadata_dir}")
+print(f"user_agents count : {len(cfg.user_agents)}")
+print(f"category_keywords : {list(cfg.category_keywords.keys())}")
+print(f"repr              : {cfg!r}")
+
+
+# ---------------------------------------------------------------------------
+# Test 4: setup_logging + get_logger
+# ---------------------------------------------------------------------------
+
+print("\n" + "=" * 60)
+print("TEST 4: setup_logging + get_logger")
+print("=" * 60)
+
+setup_logging(project_name="test_run")
+
+logger = get_logger(__name__)
+logger.debug("DEBUG message — chỉ thấy trong file log")
+logger.info("INFO message — thấy cả console lẫn file log")
+logger.warning("WARNING message")
+logger.error("ERROR message")
+
+print("\nKiểm tra:")
+print("- Console: thấy INFO / WARNING / ERROR ở trên")
+print("- File   : log_service/log_files/test_run.log")

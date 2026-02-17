@@ -1,48 +1,24 @@
-# Preprocessing Rules Configuration
+base:
+  base_url: "https://hungphat-jsc.com.vn"
+  delay_between_requests: 2
+  request_timeout: 10
+  max_retries: 3
 
-documents:
-  input_base: "raw_docs/documents"
-  output_base: "docs"
-  folders:
-    - "DB"
-    - "HLD"
-  
-  supported_formats:
-    - ".doc"
-    - ".docx"
-  
-  image_extraction:
-    enabled: true
-    output_folder: "images"
-    formats: [".png", ".jpg", ".jpeg", ".gif", ".bmp"]
-  
-  markdown_config:
-    heading_style: "atx"  # Use # for headings
-    code_block_style: "fenced"  # Use ``` for code blocks
-    preserve_formatting: true
+crawler:
+  base_dir: "crawl_data/hungphat_data_4"
+  raw_data_dir: "raw_data"
+  processed_data_dir: "processed_data"
+  images_dir: "images"
+  metadata_dir: "metadata"
 
-excels:
-  input_base: "raw_docs/excels"
-  output_base: "docs/excels"
-  folders:
-    - "nrf"
-    - "nssf"
-  
-  supported_formats:
-    - ".xlsx"
-    - ".xls"
-  
-  table_config:
-    max_column_width: 50
-    include_index: false
-    sheet_processing: "all"  # "all" or "first"
-  
-  chart_extraction:
-    enabled: true
-    output_folder: "images"
-    format: "png"
-    dpi: 300
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 
-logging:
-  level: "INFO"
-  log_file: "logs/conversion.log"
+category_keywords:
+  plastic_suitcase: ["vali nhựa", "hardcase", "plastic", "abs", "pc"]
+  fabric_suitcase: ["vali vải", "softcase", "fabric", "polyester", "nylon"]
+  backpack: ["balo", "backpack", "laptop bag"]
+  travel_bag: ["túi du lịch", "travel bag", "duffel"]
+  accessories: ["phụ kiện", "accessories", "wheels", "handles"]
