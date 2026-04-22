@@ -73,7 +73,7 @@ print("\n" + "=" * 60)
 print("TEST 4: setup_logging + get_logger")
 print("=" * 60)
 
-setup_logging(project_name="test_run")
+setup_logging()
 
 logger = get_logger(__name__)
 logger.debug("DEBUG message — chỉ thấy trong file log")
