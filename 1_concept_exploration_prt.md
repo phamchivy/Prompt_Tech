@@ -17,6 +17,7 @@ Giải thích một khái niệm / chủ đề mới để tôi:
 - So sánh với các khái niệm quen thuộc
 - Không đi sâu chi tiết không cần thiết
 - Chỉ trả lời những trường đầu ra sau
+- Không dùng các icon, trả lời ngắn gọn để phù hợp tổng hợp vào Excel
 
 [EXPLANATION STRUCTURE]
 
